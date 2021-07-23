@@ -30,11 +30,12 @@ function getTotalCount(animals) {
   //created accumulator 
   let animalCount = 0;
   //Step 2 - intialize loop 
-  for(let i = 0; i < animals.length; i++) {
+  for (let i = 0; i < animals.length; i++) {
     let countedAnimal = animals[i].count; //accessing the count key: pig
+    //add captured animal to accumulator 
     animalCount += countedAnimal;
   }
-  return animalCount 
+  return animalCount
 }
 
 getTotalCount(animals)
@@ -51,7 +52,20 @@ getTotalCount(animals)
  * getAllKinds(animals); //> ["Pig", "Cow", "Chicken", "Horse", "Dog", "Cat"]
  * getAllKinds([]); //> [] // returns empty array if input array is empty
  */
-function getAllKinds(animals) {}
+function getAllKinds(animals) {
+  //created accumulator 
+  let kindsArray = []
+  //Step 2 - initialize loop
+  for (let i = 0; i < animals.length; i++) {
+    let kindOfAnimal = animals[i].kind //Accessing the kind key again: pig
+    kindsArray.push(kindOfAnimal)
+  }
+  return kindsArray;
+}
+
+
+
+getAllKinds(animals)
 
 /**
  * FUNCTION DESCRIPTION
@@ -70,7 +84,7 @@ function getAllKinds(animals) {}
   ];
  * filterByCountMinimum([], 3); //> [] // returns empty array if input array is empty
  */
-function filterByCountMinimum(animals, minimum) {}
+function filterByCountMinimum(animals, minimum) { }
 
 /**
  * FUNCTION DESCRIPTION
@@ -84,7 +98,7 @@ function filterByCountMinimum(animals, minimum) {}
  * getMostCommonAnimal(animals); //> { kind: "Chicken", count: 11 }
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
-function getMostCommonAnimal(animals) {}
+function getMostCommonAnimal(animals) { }
 
 // Do not change anything below this line.
 module.exports = {
